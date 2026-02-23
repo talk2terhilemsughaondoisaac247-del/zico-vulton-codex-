@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vulton$box</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<section id="loginPage" class="page active">
+  <div class="overlay">
+    <div class="glass">
+      <h1>VultStream</h1>
+      <input type="text" placeholder="Username">
+      <input type="password" placeholder="Password">
+      <button onclick="goToFeed()">Login</button>
+      <p onclick="showSignup()">Create account</p>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNUP -->
+<section id="signupPage" class="page">
+  <div class="overlay">
+    <div class="glass">
+      <h1>Create Account</h1>
+      <input type="text" placeholder="Username">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button onclick="goToFeed()">Register</button>
+      <p onclick="showLogin()">Back to login</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEED -->
+<section id="feedPage" class="page">
+  <div class="overlay">
+
+    <!-- STORIES -->
+    <div class="stories">
+      <div class="story addStory">+</div>
+      <div class="story"></div>
+      <div class="story"></div>
+      <div class="story"></div>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="videoCard">
+      <div class="video">Video Content</div>
+
+      <div class="videoInfo">
+        <div class="userRow">
+          <img src="images/profile.jpg">
+          <div>
+            <h3>Isaacs</h3>
+            <span>@isaacs</span>
+          </div>
+          <button id="followBtn" onclick="followUser()">Follow</button>
+        </div>
+
+        <p class="caption">Living my best life ✨🔥</p>
+
+        <div class="actions">
+          <button onclick="likeVideo()">❤️ <span id="likeCount">0</span></button>
+          <button onclick="shareVideo()">↗ Share</button>
+        </div>
+      </div>
+    </div>
+
+    <nav>
+      <button onclick="showFeed()">Home</button>
+      <button onclick="showSearch()">Search</button>
+      <button onclick="showUpload()">Upload</button>
+      <button onclick="showProfile()">Profile</button>
+      <button onclick="showSettings()">Settings</button>
+    </nav>
+
+  </div>
+</section>
+
+<!-- UPLOAD -->
+<section id="uploadPage" class="page">
+  <div class="overlay">
+    <div class="glass">
+      <h1>Upload Vibe</h1>
+      <input type="file">
+      <input type="text" placeholder="Write caption...">
+      <button>Post</button>
+    </div>
+
+    <nav>
+      <button onclick="showFeed()">Home</button>
+      <button onclick="showSearch()">Search</button>
+      <button onclick="showUpload()">Upload</button>
+      <button onclick="showProfile()">Profile</button>
+      <button onclick="showSettings()">Settings</button>
+    </nav>
+  </div>
+   <video controls autoplay loop>
+  <source src="videos/sample.mp4" type="video/mp4">
+</video>
+</section>
+
+<!-- SEARCH -->
+<section id="searchPage" class="page">
+  <div class="overlay">
+    <div class="glass">
+      <h1>Search Creators</h1>
+      <input type="text" placeholder="Search...">
+    </div>
+
+    <nav>
+      <button onclick="showFeed()">Home</button>
+      <button onclick="showSearch()">Search</button>
+      <button onclick="showUpload()">Upload</button>
+      <button onclick="showProfile()">Profile</button>
+      <button onclick="showSettings()">Settings</button>
+    </nav>
+  </div>
+</section>
+
+<!-- PROFILE -->
+<section id="profilePage" class="page">
+  <div class="overlay">
+    <div class="profileGlass">
+      <img src="images/profile.jpg" class="profilePic">
+      <h2>Isaacs</h2>
+      <span>@isaacs</span>
+
+      <div class="stats">
+        <div><strong>120</strong><span>Following</span></div>
+        <div><strong>3.4K</strong><span>Followers</span></div>
+        <div><strong>22K</strong><span>Likes</span></div>
+      </div>
+
+      <button>Edit Profile</button>
+    </div>
+
+    <nav>
+      <button onclick="showFeed()">Home</button>
+      <button onclick="showSearch()">Search</button>
+      <button onclick="showUpload()">Upload</button>
+      <button onclick="showProfile()">Profile</button>
+      <button onclick="showSettings()">Settings</button>
+    </nav>
+  </div>
+</section>
+
+<!-- SETTINGS -->
+<section id="settingsPage" class="page">
+  <div class="overlay">
+    <div class="glass">
+      <h1>Settings</h1>
+      <p>Account</p>
+      <p>Privacy</p>
+      <p>Notifications</p>
+      <p onclick="showLogin()">Logout</p>
+    </div>
+
+    <nav>
+      <button onclick="showFeed()">Home</button>
+      <button onclick="showSearch()">Search</button>
+      <button onclick="showUpload()">Upload</button>
+      <button onclick="showProfile()">Profile</button>
+      <button onclick="showSettings()">Settings</button>
+    </nav>
+  </div>
+ 
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
